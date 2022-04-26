@@ -119,7 +119,9 @@ i = open window in vertical split
 
 t = open window in new tab
 
-o = open file
+o = open file or expand folder
+
+u = go up a folder
 
 To navigate split windows, hit ctrl j, k, l, or h
 
