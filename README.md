@@ -1,13 +1,6 @@
 ## Vim Setup
 To Install vim setup run on Vim (Not Neovim)
 
-```
-sudo apt install vim
-cd ~
-git clone https://github.com/Khoza-Technology/vi-configuration
-mv vi-configuration/init.vim .vimrc
-rm -rf vi-configuration
-```
 If vim-plug is uninstalled, run 
 ```
 # Vim:
@@ -23,12 +16,12 @@ At this point, you are ready to rock n roll!
 
 ### Awesome Vim movements
 - D = Delete to the end of the line
-- dtchar = delete to char
+- dt{char} = delete to char
 - dd = delete line
 - yy = copy line
 - V = Visual block by line
-- tchar = go to character leading up to character
-- fchar = go to character
+- t{char} = go to character leading up to character
+- f{char} = go to character
 - dit or cit = delete inside of html tags
 - t> or t< = go to > or <, very useful for html tags
 - ; and , = repeat previous t or f command
@@ -36,7 +29,6 @@ At this point, you are ready to rock n roll!
 
 ### Awesome Vim Plugins
 - **NerdTree** hit ctrl G and hit ? for documentation
-- **Fugitive Vim**, run :Git git-command, to run git commands inside of vim!
 - **Vim Surround**, changes outside surrounding quotes, html tags, etc perhaps the most useful plugin
 - **Vim Commentary**, use gc in visual mode or gcc in normal mode to comment out code!
 - **Coc Nvim**, use Vscode autocompletion!
@@ -53,7 +45,7 @@ Other nice plugins are only aesthetic
 
 Vim surround offers the ys, yss, ds, and cs commands
 
-cs + char + char will 'change the surrounding character to character' example
+cs + char + char will 'change the surrounding from character to character'
 
 ```
 Example:
@@ -62,9 +54,7 @@ Example:
   'Hello World'
 ```
 
-The ds command is very similar to cs, but instead of 'changing' the char to a certain char, 
-
-ds will only delete surrounding character
+The ds command is very similar to cs, but instead of 'changing' the char to a certain char, ds will only delete surrounding character
 
 ```
 Example:
@@ -119,7 +109,7 @@ Example:
 ```
 
 #### NerdTree
-Ctrl G will open NerdTree
+space + g in normal mode will open NerdTree
 
 For more help on commands, hit ? while in NerdTree
 
@@ -134,7 +124,7 @@ o = open file
 To navigate split windows, hit ctrl j, k, l, or h
 
 #### Vim Commentary 
-In visual mode, gc will comment out code!
+In visual mode, gc will comment out code! or use gcc to comment the current line
 
 #### Emmet Vim
-Awesome plugin, docs are at emmet.io, too much to converts
+Awesome plugin, docs are at https://emmet.io, too much to converts
