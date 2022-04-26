@@ -1,4 +1,4 @@
-## Khoza's Vim Setup
+## Vim Setup
 To Install vim setup run on Vim (Not Neovim)
 
 ```
