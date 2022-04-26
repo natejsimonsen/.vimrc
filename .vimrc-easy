@@ -1,0 +1,85 @@
+call plug#begin()
+" ============================================
+"             Functional Plugins
+" ============================================
+Plug 'tpope/vim-repeat' " a plugin to make plugin commands repeat with .
+Plug 'tpope/vim-surround' " a plugin to change, add, and remove surrounding characters
+Plug 'mattn/emmet-vim' " html and jsx shorthand, example div>li.list*4 <C-y>,
+Plug 'preservim/nerdtree' " Plugin to make moving around the filesystem easier
+Plug 'luochen1990/rainbow' " Changes the color of nested parenthesis, brackes, commas, and other things
+Plug 'tpope/vim-commentary'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+
+" ============================================
+"       Nonessential 'Pretty' Plugins
+" ============================================
+Plug 'maxmellon/vim-jsx-pretty' " jsx syntax hightlighting
+Plug 'yuezk/vim-js' " syntzx hightlighting for javascript
+Plug 'itchyny/lightline.vim' " Displays a nice bar that displays what insert mode im in
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+call plug#end()
+
+" ============================================
+"             General Settings
+" ============================================
+syntax on
+colorscheme gruvbox
+" colorscheme gruvbox
+set shiftwidth=2 " the > command is equal to two spacs
+set background=dark
+set laststatus=2 " sets the status line for vim needs to be here for lightline to work
+set incsearch
+set hlsearch " shows results of search as its type
+set expandtab " converts tabs to spaces
+set autoindent " indents to current position
+set fileformat=unix " sets the file format
+set encoding=utf-8 "sets the encoding
+set number relativenumber "sets the line number and relativenumber shows the number of the lines relative to the current position
+set splitbelow splitright " set the splitwindow to be right when the split window is opened
+
+"sets colors of javascript and jsx files
+autocmd BufNewFile,BufRead *.js,*.jsx hi Function guifg=#d65d0e
+autocmd BufNewFile,BufRead *.js,*.jsx hi String guifg=#8ec07c
+autocmd BufNewFile,BufRead *.js,*.jsx hi Type guifg=#458588
+
+" ============================================
+"              Vim Key Mappings
+" ============================================
+" replace all
+nnoremap S : %s//g<Left><Left>
+" beggining of line
+nnoremap B ^
+" end of line
+nnoremap E $
+" escape 
+inoremap jk <esc>
+map <space>p "+p
+nmap <space>y "+yy
+vmap <space>y "+y
+nmap <space>g :NERDTreeToggle<CR>
+" easier commands to navigate a split screen
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+let g:gruvbox_contrast_dark='hard' " color scheme contrast
+let g:vim_jsx_pretty_enable_jsx_highlight=1
+let g:user_emmet_leader_key="<C-y>" " sets the key for emmet to a space instead of <C-y>
+let g:rainbow_active=1 " allows vim rainbow to be loaded on start
+
+" sets color scheme of the lightline plugin
+let g:lightline = {
+  \'colorscheme': 'gruvbox',
+\}
+
+" emmet setting so classes work in jsx
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+  \    'extends' : 'jsx',
+  \  },
+\}
