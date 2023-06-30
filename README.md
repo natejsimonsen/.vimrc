@@ -13,6 +13,8 @@ sudo apt install git
 ```
 At this point, you are ready to rock n roll!
 
+### Before you begin
+The point of using vim in a terminal is to have a fast, easy to use text editor. The `.vimrc` file has a lot more features such as autocompletion, linting, and auto code formatting. I have found that `.vimrc-easy` has most of the features needed while providing the least overhead, so if you want a quick setup use `.vimrc-easy`
 
 ### Awesome Vim movements
 - D = Delete to the end of the line
@@ -45,7 +47,7 @@ Other nice plugins are only aesthetic
 
 Vim surround offers the ys, yss, ds, and cs commands
 
-cs + char + char will 'change the surrounding from character to character'
+`cs`(char)(char) will 'change the surrounding from character to character'
 
 ```
 Example:
@@ -54,7 +56,7 @@ Example:
   'Hello World'
 ```
 
-The ds command is very similar to cs, but instead of 'changing' the char to a certain char, ds will only delete surrounding character
+The `ds` command is very similar to `cs`, but instead of 'changing' the char to a certain char, `ds` will only delete surrounding character
 
 ```
 Example:
@@ -63,9 +65,9 @@ Example:
   hello world
 ```
 
-the ds and cs also work with html tags, but instead of ds char or cs + char + char, 
+the `ds` and `cs` also work with html tags, but instead of `ds`(char) or `cs`(char)(char), 
 
-run dst or cst<desired-tag-name>
+run `dst` or `cst`<desired-tag-name>
 
 ```
 Example with dst:
@@ -80,11 +82,11 @@ Example with cst:
     <a>Hello World</a>
 ```
 
-ys is a command which will surround a sequence with a character
+`ys` is a command which will surround a sequence with a character
 
-ys can be combined with any movement commands or be in Visual mode, also combined with numbers
+`ys` can be combined with any movement commands or be in Visual mode, also combined with numbers
 
-most practical applications of ys are either ys + num + word or ystchar or ysfchar desired-surrounding
+most practical applications of `ys` are either `ys` + `num` + `word` or `yst`(char) or `ysf`(char) desired-surrounding
 
 ```
 Simple Example:
@@ -99,7 +101,7 @@ Example with html:
   <strong>Hello World:</strong> It is nice to be here!
 ```
 
-yss works the same as ys, but will surround an entire line
+`yss` works the same as `ys`, but will surround an entire line
 
 ```
 Example:
@@ -109,24 +111,24 @@ Example:
 ```
 
 #### NerdTree
-space + g in normal mode will open NerdTree
+`space + g` in normal mode will open NerdTree
 
-For more help on commands, hit ? while in NerdTree
+For more help on commands, hit `?` while in NerdTree
 
-In the NerdTree window, the i, o, and t commands are the most useful
+In the NerdTree window, the `i`, `o`, and `t` commands are the most useful
 
-i = open window in vertical split
+`i` = open window in vertical split
 
-t = open window in new tab
+`t` = open window in new tab
 
-o = open file or expand folder
+`o` = open file or expand folder
 
-u = go up a folder
+`u` = go up a folder
 
 To navigate split windows, hit ctrl j, k, l, or h
 
 #### Vim Commentary 
-In visual mode, gc will comment out code! or use gcc to comment the current line
+In visual mode, `gc` will comment out code! or use `gcc` to comment the current line
 
 #### Emmet Vim
-Awesome plugin, docs are at https://emmet.io, too much to converts
+Awesome plugin for easier html/jsx writing, docs are at https://emmet.io.
